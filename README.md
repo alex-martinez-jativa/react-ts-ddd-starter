@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# React TypeScript DDD Architecture Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Folder Structure
 
-Currently, two official plugins are available:
+### Domain
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This directory contains the model entities and repository interfaces.
 
-## Expanding the ESLint configuration
+### Infrastructure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Here, you'll find all the infrastructure logic, such as external connections (e.g., fetching data). Additionally, there's a wrapper for API fetch operations.
 
-- Configure the top-level `parserOptions` property like this:
+### Application
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+This directory has the use cases that interact with the repository. It serves as the file used in the presentation layer.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Presentation
+
+All pages and components are organized in this directory.
+
+
+### Getting Started
+
+To use this project, follow these steps:
+
+1. Clone the repository:
+
+- `git clone <repository-url>`
+
+2. Install dependencies:
+
+- `npm install`
+
+3. Run the development server:
+
+- `npm run dev`

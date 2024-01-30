@@ -1,5 +1,7 @@
 # React TypeScript DDD Architecture Starter
 
+![Software Architecture](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2ptMDcwdWs3aWZlMjNnemR3NzVwOWN4MHRpeXgxanRzanMyN3lvMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gMhMkLk1lycxO/giphy.gif)
+
 ## Folder Structure
 
 ### Domain
@@ -34,3 +36,7 @@ To use this project, follow these steps:
 3. Run the development server:
 
 - `npm run dev`
+
+#### Note:
+
+The project includes an example demonstrating the entire flow, including an external API call to [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)

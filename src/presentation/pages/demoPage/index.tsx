@@ -5,10 +5,10 @@ import { DemoUseCase } from '../../../application/use-cases/demoUseCase'
 export default function DemoPage() {
   const [demoText, setDemoText] = useState<string | null>(null)
 
-  const demoUseCase = new DemoUseCase()
-
   useEffect(() => {
+    const demoUseCase = new DemoUseCase()
     const { text } = demoUseCase.execute()
+
     setDemoText(text)
   }, [])
 

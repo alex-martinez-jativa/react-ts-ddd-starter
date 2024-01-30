@@ -1,7 +1,9 @@
+import DemoPage from './presentation/pages/demoPage'
+
 function App() {
   return (
     <>
-      <p>Hola</p>
+      <DemoPage />
     </>
   )
 }

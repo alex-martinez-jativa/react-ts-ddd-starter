@@ -1,5 +1,23 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+ul {
+  list-style: none;
+  max-width: 500px;
+  background-color: aquamarine;
+}
+
+li {
+  padding: 2rem;
 }

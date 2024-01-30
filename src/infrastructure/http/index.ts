@@ -1,14 +1,17 @@
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE'
+type Headers = {
+  [key: string]: string
+}
 type IHttp<TBody> = {
   token?: string | null
   url: string
-  method: HttpMethod
-  headers: Record<string, string>
+  method?: HttpMethod
+  headers?: Headers
   body?: TBody
 }
 
-async function Http<TBody, TResponse>(options: IHttp<TBody>): Promise<TResponse> {
-  const { token, url, method, headers, body } = options
+async function Http<TResponse, TBody>(options: IHttp<TBody>): Promise<TResponse> {
+  const { token, url, method = 'GET', headers = { ContentType: 'application/json' }, body } = options
 
   const authToken = {
     ...(headers || {}),

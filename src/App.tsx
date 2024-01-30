@@ -1,9 +1,9 @@
-import DemoPage from './presentation/pages/demoPage'
+import PostsPage from './presentation/pages/PostsPage'
 
 function App() {
   return (
     <>
-      <DemoPage />
+      <PostsPage />
     </>
   )
 }

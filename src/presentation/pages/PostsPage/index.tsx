@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { GetPostsUseCase } from '../../../application/use-cases/getPostsUseCase'
 import { Post } from '../../../domain/entities/PostEntity'
+import PostItem from '../../components/Post'
 
 export default function DemoPage() {
   const [posts, setPosts] = useState<Post[] | null>(null)
@@ -20,12 +21,7 @@ export default function DemoPage() {
       <ul>
         {posts &&
           posts.map((item) => {
-            return (
-              <li key={item.id}>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </li>
-            )
+            return <PostItem id={item.id} title={item.title} body={item.body} />
           })}
       </ul>
     </>
